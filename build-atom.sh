@@ -6,5 +6,5 @@ cd /tmp/atom
 git checkout v0.103.0
 npm config set python /usr/bin/python2 -g
 script/build
-sudo script/grunt install
+script/grunt install
 script/grunt mkdeb 
