@@ -2,7 +2,7 @@
 
 ##Overview
 
-Install and run the [Atom editor](https://atom.io/) from within a Docker container:
+Install and run the [Atom editor](https://atom.io/) from within a Docker container.
 
 ##Building the image
 
@@ -29,7 +29,11 @@ xhost -
 To launch Atom do:
 
 ```
-docker run -d -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/shm:/dev/shm -v ${PWD}/.atom:/.atom -e DISPLAY=${DISPLAY}
+docker run -d -v /tmp/.X11-unix/:/tmp/.X11-unix/ \
+              -v /dev/shm:/dev/shm \
+              -v ${PWD}/.atom:/.atom \
+              -e DISPLAY=${DISPLAY} \
+              <image name here>
 ```
 
 ##Mit License
