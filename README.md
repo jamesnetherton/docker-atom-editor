@@ -20,7 +20,7 @@ First up, you'll need to allow docker containers to access your X server. To do 
 xhost +
 ```
 
-This allows *all* hosts access to the X server and thus isn't great for security. When your done using your containers, it's a good idea to revoke access with:
+This allows *all* hosts access to the X server and thus isn't great for security. When you're done using your containers, it's a good idea to revoke access with:
 
 ```
 xhost -
