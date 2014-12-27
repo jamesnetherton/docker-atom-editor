@@ -29,8 +29,6 @@ xhost -
 To launch Atom do:
 
 ```
-docker pull jamesnetherton/docker-atom-editor
-
 docker run -d -v /tmp/.X11-unix/:/tmp/.X11-unix/ \
               -v /dev/shm:/dev/shm \
               -v ${PWD}/.atom:/.atom \
