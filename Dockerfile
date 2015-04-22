@@ -1,6 +1,6 @@
 FROM ubuntu:12.04
 
-ENV ATOM_VERSION v0.175.0
+ENV ATOM_VERSION v0.193.0
 
 ADD build-atom.sh /usr/local/bin/build-atom.sh
 
