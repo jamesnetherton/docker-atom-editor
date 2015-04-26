@@ -1,15 +1,27 @@
 FROM ubuntu:12.04
 
-ENV ATOM_VERSION v0.193.0
-
-ADD build-atom.sh /usr/local/bin/build-atom.sh
+ENV ATOM_VERSION v0.194.0
 
 RUN apt-get update && \
-    apt-get install git npm libgnome-keyring-dev curl make g++ libgtk2.0-0 libxtst6 libnss3 libgconf-2-4 libasound2 fakeroot gconf2 libnotify4 gvfs-bin xdg-utils libcap2 -y && \
-    git clone https://github.com/atom/atom /tmp/atom && \
-    /bin/sh /usr/local/bin/build-atom.sh && \
-    dpkg -i /tmp/atom-build/atom*.deb && \
-    rm -rf /tmp/d-* /tmp/atom* && \
-    apt-get clean
+    apt-get install git \
+                    curl \
+                    libgtk2.0-0 \
+                    libxtst6 \
+                    libnss3 \
+                    libgconf-2-4 \
+                    libasound2 \
+                    fakeroot \
+                    gconf2 \
+                    gconf-service \
+                    libcap2 \
+                    libnotify4 \
+                    libxtst6 \
+                    libnss3 \
+                    gvfs-bin \
+                    xdg-utils -y && \
+    apt-get clean && \
+    curl -L https://github.com/atom/atom/releases/download/${ATOM_VERSION}/atom-amd64.deb > /tmp/atom.deb && \
+    dpkg -i /tmp/atom.deb && \
+    rm -f /tmp/atom.deb
 
-CMD ["/usr/local/bin/atom","-f"]
+CMD ["/usr/bin/atom","-f"]
