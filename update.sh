@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ATOM_REPO=atom/atom
 DOCKER_ATOM_REPO=jamesnetherton/docker-atom-editor
