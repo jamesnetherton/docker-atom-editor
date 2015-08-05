@@ -1,6 +1,6 @@
 FROM ubuntu:12.04
 
-ENV ATOM_VERSION v1.0.3
+ENV ATOM_VERSION v1.0.4
 
 RUN apt-get update && \
     apt-get install git \
