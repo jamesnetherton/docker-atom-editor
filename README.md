@@ -1,10 +1,10 @@
-#docker-atom-editor
+# docker-atom-editor
 
-##Overview
+## Overview
 
 Install and run the [Atom editor](https://atom.io/) from within a Docker container.
 
-##Building the image
+## Building the image
 
 Clone this repository, change into the source directory and run:
 
@@ -12,7 +12,7 @@ Clone this repository, change into the source directory and run:
 docker build .
 ```
 
-##Running Atom
+## Running Atom
 
 First up, you'll need to allow docker containers to access your X server. To do this run: 
 
@@ -36,7 +36,7 @@ docker run -d -v /tmp/.X11-unix/:/tmp/.X11-unix/ \
               jamesnetherton/docker-atom-editor
 ```
 
-##Mit License
+## Mit License
 
 The MIT License (MIT)
 
