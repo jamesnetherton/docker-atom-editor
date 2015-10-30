@@ -1,10 +1,11 @@
-FROM ubuntu:12.04
+FROM ubuntu:latest
 
 ENV ATOM_VERSION v1.1.0
 
 RUN apt-get update && \
     apt-get install git \
                     curl \
+                    ca-certificates \
                     libgtk2.0-0 \
                     libxtst6 \
                     libnss3 \
@@ -18,10 +19,13 @@ RUN apt-get update && \
                     libxtst6 \
                     libnss3 \
                     gvfs-bin \
-                    xdg-utils -y && \
+                    xdg-utils -y --no-install-recommends && \
     apt-get clean && \
     curl -L https://github.com/atom/atom/releases/download/${ATOM_VERSION}/atom-amd64.deb > /tmp/atom.deb && \
     dpkg -i /tmp/atom.deb && \
-    rm -f /tmp/atom.deb
+    rm -f /tmp/atom.deb && \
+    useradd -d /home/atom -m atom
+
+USER atom
 
 CMD ["/usr/bin/atom","-f"]
