@@ -19,7 +19,8 @@ RUN apt-get update && \
                     libxtst6 \
                     libnss3 \
                     gvfs-bin \
-                    xdg-utils -y --no-install-recommends && \
+                    xdg-utils \
+                    python -y --no-install-recommends && \
     apt-get clean && \
     curl -L https://github.com/atom/atom/releases/download/${ATOM_VERSION}/atom-amd64.deb > /tmp/atom.deb && \
     dpkg -i /tmp/atom.deb && \
