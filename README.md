@@ -21,5 +21,5 @@ docker run -d -v /tmp/.X11-unix/:/tmp/.X11-unix/ \
               -e DISPLAY=${DISPLAY} \
               jamesnetherton/docker-atom-editor
 ```
-Note that `-v /dev/shm:/dev/shm` may be optionnal and can be replaced by `--shm-size="<number><unit>"`.
+Note that `-v /dev/shm:/dev/shm` may be optional and can be replaced by `--shm-size="<number><unit>"`.
 
