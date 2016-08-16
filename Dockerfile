@@ -3,7 +3,8 @@ FROM ubuntu:latest
 ENV ATOM_VERSION v1.9.8
 
 RUN apt-get update && \
-    apt-get install git \
+    apt-get install -y --no-install-recommends \
+                    git \
                     curl \
                     ca-certificates \
                     libgtk2.0-0 \
@@ -20,8 +21,8 @@ RUN apt-get update && \
                     libnss3 \
                     gvfs-bin \
                     xdg-utils \
-                    python -y --no-install-recommends && \
-    apt-get clean && \
+                    python && \
+    apt-get clean && rm -rf /var/lib/apt/lists/* && \
     curl -L https://github.com/atom/atom/releases/download/${ATOM_VERSION}/atom-amd64.deb > /tmp/atom.deb && \
     dpkg -i /tmp/atom.deb && \
     rm -f /tmp/atom.deb && \
