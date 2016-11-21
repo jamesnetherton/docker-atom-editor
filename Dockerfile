@@ -19,6 +19,7 @@ RUN apt-get update && \
                     libnotify4 \
                     libxtst6 \
                     libnss3 \
+                    libxss1 \
                     gvfs-bin \
                     xdg-utils \
                     python && \
