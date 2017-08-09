@@ -20,6 +20,8 @@ RUN apt-get update && \
       libxkbfile1 \
       libxss1 \
       libxtst6 \
+      libgl1-mesa-glx \
+      libgl1-mesa-dri \
       python \
       xdg-utils && \
     apt-get clean && \
