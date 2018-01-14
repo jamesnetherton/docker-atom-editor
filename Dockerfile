@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-ENV ATOM_VERSION v1.23.2
+ENV ATOM_VERSION v1.23.3
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
