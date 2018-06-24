@@ -14,9 +14,12 @@ RUN apt-get update && \
       libasound2 \
       libcap2 \
       libgconf-2-4 \
+      libgcrypt20 \
       libgtk2.0-0 \
+      libgtk-3-0 \
       libnotify4 \
       libnss3 \
+      libx11-xcb1 \
       libxkbfile1 \
       libxss1 \
       libxtst6 \
