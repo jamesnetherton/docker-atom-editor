@@ -3,7 +3,7 @@ FROM ubuntu:latest
 ENV ATOM_VERSION v1.47.0
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
       ca-certificates \
       curl \
       fakeroot \
