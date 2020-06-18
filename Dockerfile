@@ -37,4 +37,4 @@ RUN apt-get update && \
 
 USER atom
 
-CMD ["/usr/bin/atom","-f"]
+CMD ["/usr/bin/atom","-f","--no-sandbox"]
