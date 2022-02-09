@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-ENV ATOM_VERSION v1.58.0
+ENV ATOM_VERSION v1.59.0
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
@@ -15,6 +15,7 @@ RUN apt-get update && \
       libcap2 \
       libgconf-2-4 \
       libgcrypt20 \
+      libgbm1 \
       libgtk2.0-0 \
       libgtk-3-0 \
       libnotify4 \
